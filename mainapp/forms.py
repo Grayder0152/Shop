@@ -8,8 +8,7 @@ class OrderForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['order_date'].label = 'Дата получения заказа'
 
-
-    order_date = forms.DateField(widget=forms.TextInput(attrs={'type':'date'}))
+    order_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
 
     class Meta:
         model = Order

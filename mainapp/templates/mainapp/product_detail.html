@@ -22,8 +22,5 @@
             <hr>
             <a href="{% url 'add_to_cart' ct_model=ct_model slug=product.slug %}"><button class="btn btn-danger">Добавить в корзину</button></a>
         </div>
-
-        <h4 class="mt-4">Характеристики:</h4>
-        {{ product|product_spec }}
     </div>
 {% endblock content %}
