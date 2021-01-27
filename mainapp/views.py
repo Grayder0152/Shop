@@ -18,7 +18,6 @@ class BaseView(CartMixin, View):
             'categories': categories,
             'products': products,
             'cart': self.cart
-
         }
         return render(request, 'mainapp/base.html', context)
 
