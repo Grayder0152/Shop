@@ -16,7 +16,8 @@ class BaseView(CartMixin, View):
         products = Product.objects.all()
         context = {
             'products': products,
-            'cart': self.cart
+            'cart': self.cart,
+            'categories': categories
         }
         return render(request, 'mainapp/base.html', context)
 
