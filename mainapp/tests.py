@@ -3,7 +3,7 @@ from .models import *
 from django.contrib.auth import get_user_model
 from django.core.files.uploadedfile import SimpleUploadedFile
 from decimal import Decimal
-from .views import recalc_cart, AddToCArtView
+from .views import recalc_cart, AddToCartView
 
 User = get_user_model()
 
