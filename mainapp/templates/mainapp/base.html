@@ -30,7 +30,7 @@
                 </li>
                 {% if not request.user.is_authenticated %}
                     <li>
-                        <a class="nav-link text-light">Авторизация</a>
+                        <a class="nav-link text-light" href="{% url 'login' %}">Авторизация</a>
                     </li>
                     <li>
                         <a class="nav-link text-light">Регистрация</a>
@@ -39,7 +39,9 @@
                 <li class="nav-item">
                     {% if request.user.is_authenticated %}
                         <span class="navbar text text-light">Здраствуйте, <span class="badge badge-danger">
-                            <a class="text-light" style="text-decoration:none; font-size:14px;" href="#">{{ request.user.username }}</a>
+                            <a class="text-light" style="text-decoration:none; font-size:14px;" href="#">
+                                {{ request.user.username }}
+                            </a>
                         </span></span>
                     {% endif %}
                 </li>
