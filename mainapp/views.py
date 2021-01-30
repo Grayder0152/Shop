@@ -199,3 +199,16 @@ class RegistrationView(CartMixin, View):
             'cart': self.cart
         }
         return render(request, 'mainapp/registration.html', context)
+
+
+class ProfileView(CartMixin, View):
+    def get(self, request, *args, **kwargs):
+        customer = Customer.objects.get(user=request.user)
+        orders = Order.objects.filter(cust=customer).order_by('-created_at')
+        categories = Category.objects.all()
+        context = {
+            'orders': orders,
+            'cart': self.cart,
+            'categories': categories
+        }
+        return render(request, 'mainapp/profile.html', context)
