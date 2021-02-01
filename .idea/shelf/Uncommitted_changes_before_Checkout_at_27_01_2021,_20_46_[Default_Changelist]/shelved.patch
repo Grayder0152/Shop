@@ -1,0 +1,100 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"BranchesTreeState\">\n    <expand />\n    <select />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"d01693ee-51ac-469b-8ddd-a84b11ec5b2c\" name=\"Default Changelist\" comment=\"Тестовое изменение\">\n      <change beforePath=\"$PROJECT_DIR$/db.sqlite3\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/db.sqlite3\" afterDir=\"false\" />\n    </list>\n    <list id=\"540e1be1-96b9-4015-bb54-2b4174d0a090\" name=\"Revert &quot;Загрузка проэкта&quot;\" comment=\"Revert &quot;Загрузка проэкта&quot;&#10;&#10;This reverts commit b005e6bd\">\n      <change beforePath=\"$PROJECT_DIR$/mainapp/views.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/mainapp/views.py\" afterDir=\"false\" />\n    </list>\n    <list id=\"de663487-eea0-4445-a9ca-4911ad5cc72a\" name=\"Revert &quot;Тестовое изменение&quot;\" comment=\"\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"HTML File\" />\n        <option value=\"Python Script\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n    <option name=\"RESET_MODE\" value=\"MIXED\" />\n  </component>\n  <component name=\"ProjectId\" id=\"1n526qHlYzhuR3hJCfxpzmICxN8\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"ToolWindowDB Browser.ShowToolbar\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/mainapp/templates/mainapp\" />\n      <recent name=\"$PROJECT_DIR$/mainapp\" />\n    </key>\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/mainapp/templates\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"admin\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"Shop\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/mainapp\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/mainapp/admin.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Python.admin\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"d01693ee-51ac-469b-8ddd-a84b11ec5b2c\" name=\"Default Changelist\" comment=\"\" />\n      <changelist id=\"de663487-eea0-4445-a9ca-4911ad5cc72a\" name=\"Revert &quot;Тестовое изменение&quot;\" comment=\"\" />\n      <created>1610665458562</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1610665458562</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Тестовое изменение\">\n      <created>1611768076595</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1611768076595</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Revert &quot;Тестовое изменение&quot;&#10;&#10;This reverts commit f70fdc15\">\n      <created>1611768321434</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1611768321434</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"3\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.History.Properties\">\n    <option name=\"COLUMN_ORDER\">\n      <list>\n        <option value=\"0\" />\n        <option value=\"2\" />\n        <option value=\"3\" />\n        <option value=\"1\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State>\n              <option name=\"CUSTOM_BOOLEAN_PROPERTIES\">\n                <map>\n                  <entry key=\"Show.Git.Branches\" value=\"true\" />\n                </map>\n              </option>\n              <option name=\"FILTERS\">\n                <map>\n                  <entry key=\"branch\">\n                    <value>\n                      <list>\n                        <option value=\"master\" />\n                      </list>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n            </State>\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Тестовое изменение\" />\n    <MESSAGE value=\"Revert &quot;Тестовое изменение&quot;&#10;&#10;This reverts commit f70fdc15\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Revert &quot;Тестовое изменение&quot;&#10;&#10;This reverts commit f70fdc15\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"65\" y=\"117\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog\" timestamp=\"1611399162703\">\n      <screen x=\"0\" y=\"28\" width=\"1920\" height=\"1052\" />\n    </state>\n    <state x=\"65\" y=\"117\" key=\"#com.intellij.execution.impl.EditConfigurationsDialog/0.28.1920.1052@0.28.1920.1052\" timestamp=\"1611399162703\" />\n    <state x=\"680\" y=\"351\" width=\"550\" height=\"404\" key=\"#com.intellij.fileTypes.FileTypeChooser\" timestamp=\"1611068061822\">\n      <screen x=\"0\" y=\"28\" width=\"1920\" height=\"1052\" />\n    </state>\n    <state x=\"680\" y=\"351\" width=\"550\" height=\"404\" key=\"#com.intellij.fileTypes.FileTypeChooser/0.28.1920.1052@0.28.1920.1052\" timestamp=\"1611068061822\" />\n    <state x=\"505\" y=\"58\" width=\"900\" height=\"990\" key=\"CommitChangelistDialog2\" timestamp=\"1611768462417\">\n      <screen x=\"0\" y=\"28\" width=\"1920\" height=\"1052\" />\n    </state>\n    <state x=\"505\" y=\"58\" width=\"900\" height=\"990\" key=\"CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052\" timestamp=\"1611768462417\" />\n    <state x=\"100\" y=\"128\" width=\"1720\" height=\"852\" key=\"DiffContextDialog\" timestamp=\"1611769493912\">\n      <screen x=\"0\" y=\"28\" width=\"1920\" height=\"1052\" />\n    </state>\n    <state x=\"100\" y=\"128\" width=\"1720\" height=\"852\" key=\"DiffContextDialog/0.28.1920.1052@0.28.1920.1052\" timestamp=\"1611769493912\" />\n    <state x=\"743\" y=\"312\" width=\"424\" height=\"482\" key=\"FileChooserDialogImpl\" timestamp=\"1611068573533\">\n      <screen x=\"0\" y=\"28\" width=\"1920\" height=\"1052\" />\n    </state>\n    <state x=\"743\" y=\"312\" width=\"424\" height=\"482\" key=\"FileChooserDialogImpl/0.28.1920.1052@0.28.1920.1052\" timestamp=\"1611068573533\" />\n    <state width=\"1895\" height=\"276\" key=\"GridCell.Tab.0.bottom\" timestamp=\"1611414721618\">\n      <screen x=\"0\" y=\"28\" width=\"1920\" height=\"1052\" />\n    </state>\n    <state width=\"1895\" height=\"276\" key=\"GridCell.Tab.0.bottom/0.28.1920.1052@0.28.1920.1052\" timestamp=\"1611414721618\" />\n    <state width=\"1895\" height=\"276\" key=\"GridCell.Tab.0.center\" timestamp=\"1611414721616\">\n      <screen x=\"0\" y=\"28\" width=\"1920\" height=\"1052\" />\n    </state>\n    <state width=\"1895\" height=\"276\" key=\"GridCell.Tab.0.center/0.28.1920.1052@0.28.1920.1052\" timestamp=\"1611414721616\" />\n    <state width=\"1895\" height=\"276\" key=\"GridCell.Tab.0.left\" timestamp=\"1611414721615\">\n      <screen x=\"0\" y=\"28\" width=\"1920\" height=\"1052\" />\n    </state>\n    <state width=\"1895\" height=\"276\" key=\"GridCell.Tab.0.left/0.28.1920.1052@0.28.1920.1052\" timestamp=\"1611414721615\" />\n    <state width=\"1895\" height=\"276\" key=\"GridCell.Tab.0.right\" timestamp=\"1611414721617\">\n      <screen x=\"0\" y=\"28\" width=\"1920\" height=\"1052\" />\n    </state>\n    <state width=\"1895\" height=\"276\" key=\"GridCell.Tab.0.right/0.28.1920.1052@0.28.1920.1052\" timestamp=\"1611414721617\" />\n    <state x=\"182\" y=\"117\" width=\"1536\" height=\"869\" key=\"MergeDialog\" timestamp=\"1611768457998\">\n      <screen x=\"0\" y=\"28\" width=\"1920\" height=\"1052\" />\n    </state>\n    <state x=\"182\" y=\"117\" width=\"1536\" height=\"869\" key=\"MergeDialog/0.28.1920.1052@0.28.1920.1052\" timestamp=\"1611768457998\" />\n    <state x=\"591\" y=\"313\" width=\"728\" height=\"479\" key=\"MultipleFileMergeDialog\" timestamp=\"1611768458000\">\n      <screen x=\"0\" y=\"28\" width=\"1920\" height=\"1052\" />\n    </state>\n    <state x=\"591\" y=\"313\" width=\"728\" height=\"479\" key=\"MultipleFileMergeDialog/0.28.1920.1052@0.28.1920.1052\" timestamp=\"1611768458000\" />\n    <state x=\"803\" y=\"463\" width=\"304\" height=\"177\" key=\"VCS.ChangelistChooser\" timestamp=\"1611768811978\">\n      <screen x=\"0\" y=\"28\" width=\"1920\" height=\"1052\" />\n    </state>\n    <state x=\"803\" y=\"463\" width=\"304\" height=\"177\" key=\"VCS.ChangelistChooser/0.28.1920.1052@0.28.1920.1052\" timestamp=\"1611768811978\" />\n    <state x=\"287\" y=\"162\" width=\"800\" height=\"527\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1611772854239\">\n      <screen x=\"0\" y=\"28\" width=\"1920\" height=\"1052\" />\n    </state>\n    <state x=\"287\" y=\"162\" width=\"800\" height=\"527\" key=\"Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052\" timestamp=\"1611772854239\" />\n    <state x=\"738\" y=\"466\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1611769449096\">\n      <screen x=\"0\" y=\"28\" width=\"1920\" height=\"1052\" />\n    </state>\n    <state x=\"738\" y=\"466\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1920.1052@0.28.1920.1052\" timestamp=\"1611769449096\" />\n    <state x=\"316\" y=\"288\" width=\"523\" height=\"209\" key=\"git4idea.remote.GitConfigureRemotesDialog\" timestamp=\"1611767870931\">\n      <screen x=\"0\" y=\"28\" width=\"1920\" height=\"1052\" />\n    </state>\n    <state x=\"316\" y=\"288\" width=\"523\" height=\"209\" key=\"git4idea.remote.GitConfigureRemotesDialog/0.28.1920.1052@0.28.1920.1052\" timestamp=\"1611767870931\" />\n    <state x=\"623\" y=\"260\" width=\"672\" height=\"678\" key=\"search.everywhere.popup\" timestamp=\"1611679286618\">\n      <screen x=\"0\" y=\"28\" width=\"1920\" height=\"1052\" />\n    </state>\n    <state x=\"623\" y=\"260\" width=\"672\" height=\"678\" key=\"search.everywhere.popup/0.28.1920.1052@0.28.1920.1052\" timestamp=\"1611679286618\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision d667957b5470820a4ee35cf7dbe6862b3fa5793f)
++++ .idea/workspace.xml	(date 1611773070406)
+@@ -1,16 +1,31 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="BranchesTreeState">
+-    <expand />
+-    <select />
++    <expand>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++    </expand>
++    <select>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++    </select>
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="d01693ee-51ac-469b-8ddd-a84b11ec5b2c" name="Default Changelist" comment="Тестовое изменение">
+-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+-    </list>
+-    <list id="540e1be1-96b9-4015-bb54-2b4174d0a090" name="Revert &quot;Загрузка проэкта&quot;" comment="Revert &quot;Загрузка проэкта&quot;&#10;&#10;This reverts commit b005e6bd">
+-      <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
+-    </list>
++    <list default="true" id="d01693ee-51ac-469b-8ddd-a84b11ec5b2c" name="Default Changelist" comment="Загржаю ещё раз" />
++    <list id="540e1be1-96b9-4015-bb54-2b4174d0a090" name="Revert &quot;Загрузка проэкта&quot;" comment="Revert &quot;Загрузка проэкта&quot;&#10;&#10;This reverts commit b005e6bd" />
+     <list id="de663487-eea0-4445-a9ca-4911ad5cc72a" name="Revert &quot;Тестовое изменение&quot;" comment="" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -102,7 +117,21 @@
+       <option name="project" value="LOCAL" />
+       <updated>1611768321434</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="Загржаю ещё раз">
++      <created>1611772838483</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1611772838483</updated>
++    </task>
++    <task id="LOCAL-00004" summary="Загржаю ещё раз">
++      <created>1611772913727</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1611772913727</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.History.Properties">
+@@ -124,17 +153,6 @@
+               <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                 <map>
+                   <entry key="Show.Git.Branches" value="true" />
+-                </map>
+-              </option>
+-              <option name="FILTERS">
+-                <map>
+-                  <entry key="branch">
+-                    <value>
+-                      <list>
+-                        <option value="master" />
+-                      </list>
+-                    </value>
+-                  </entry>
+                 </map>
+               </option>
+             </State>
+@@ -147,7 +165,8 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Тестовое изменение" />
+     <MESSAGE value="Revert &quot;Тестовое изменение&quot;&#10;&#10;This reverts commit f70fdc15" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Тестовое изменение&quot;&#10;&#10;This reverts commit f70fdc15" />
++    <MESSAGE value="Загржаю ещё раз" />
++    <option name="LAST_COMMIT_MESSAGE" value="Загржаю ещё раз" />
+   </component>
+   <component name="WindowStateProjectService">
+     <state x="65" y="117" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611399162703">

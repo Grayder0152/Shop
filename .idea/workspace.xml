@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:shop-v2" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3c614c00-a7ca-4d17-826c-2c7f7c522d19" name="Default Changelist" comment="Добавление локики создание категории">
+      <change afterPath="$PROJECT_DIR$/specs/templates/specs/new_feature.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/specs/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/templates/specs/product_features.html" beforeDir="false" afterPath="$PROJECT_DIR$/specs/templates/specs/product_features.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/specs/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/specs/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="d5ea3ed4401933f33de12c6f5d7690fd7a181347" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1nfFcbcl10tXpLqbPu3JyXbKgvf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/specs/templates/specs" />
+      <recent name="$PROJECT_DIR$/mainapp" />
+      <recent name="$PROJECT_DIR$/Shop" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3c614c00-a7ca-4d17-826c-2c7f7c522d19" name="Default Changelist" comment="" />
+      <created>1611773318579</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611773318579</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Большой рефакторинг кода(изменения моделей)">
+      <created>1611790949410</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1611790949410</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Заполнение БД и рефакторинг">
+      <created>1611836138588</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611836138588</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Стилизация navbar для регистрации">
+      <created>1611838334442</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611838334442</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Создание логики АВТОРИЗАЦИИ пользоватиля">
+      <created>1611842469419</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611842469419</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Регисрация">
+      <created>1611947361245</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611947361245</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Создание профиля пользователя">
+      <created>1612006721691</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612006721691</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Создание содели характеристик">
+      <created>1612008617946</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1612008617946</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Изменение моделей характеристик">
+      <created>1612133641336</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1612133641336</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Cоздание страници для заполнения характеристик">
+      <created>1612135317413</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1612135317413</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Добавление локики создание характеристик">
+      <created>1612182821716</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612182821716</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="shop-v2" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Большой рефакторинг кода(изменения моделей)" />
+    <MESSAGE value="Заполнение БД и рефакторинг" />
+    <MESSAGE value="Стилизация navbar для регистрации" />
+    <MESSAGE value="Создание логики АВТОРИЗАЦИИ пользоватиля" />
+    <MESSAGE value="Регисрация" />
+    <MESSAGE value="Создание профиля пользователя" />
+    <MESSAGE value="Создание содели характеристик" />
+    <MESSAGE value="Изменение моделей характеристик" />
+    <MESSAGE value="Cоздание страници для заполнения характеристик" />
+    <MESSAGE value="Добавление локики создание категории" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление локики создание категории" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="418" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611773273074">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="418" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1611773273074" />
+    <state x="696" y="450" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1612183102672">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="696" y="450" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog/0.28.1920.1052@0.28.1920.1052" timestamp="1612183102672" />
+    <state x="61" y="28" width="800" height="527" key="Vcs.Push.Dialog.v2" timestamp="1612183110138">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="61" y="28" width="800" height="527" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1612183110138" />
+    <state x="738" y="466" width="443" height="176" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612183169234">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="738" y="466" width="443" height="176" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1920.1052@0.28.1920.1052" timestamp="1612183169234" />
+    <state x="623" y="260" width="672" height="678" key="search.everywhere.popup" timestamp="1612002119028">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="623" y="260" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1612002119028" />
+  </component>
+</project>
