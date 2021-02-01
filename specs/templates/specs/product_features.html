@@ -7,26 +7,30 @@
     <title>Характеристики товаров</title>
 </head>
 <body>
-    <div class="container">
-        <h3 class="text-center">Админка характеристик</h3>
-        <hr>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="list-group">
-                    <a href="{% url 'new_category' %}" class="list-group-item action">Созжать новую категорию</a>
-                    <a href="#" class="list-group-item action">Созжать новую характеристику</a>
-                    <a href="#" class="list-group-item action">Созжать значение хаоактеристики</a>
-                    <a href="#" class="list-group-item action">Созжать характеристику для товара</a>
-                    <a href="#" class="list-group-item action">Редаткировать характеристики товара</a>
-                </div>
-            </div>
-            <div class="col-md-8">
-                {% block content %}
-
-                {% endblock content %}
+<div class="container">
+    <h3 class="text-center">Админка характеристик</h3>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="list-group">
+                <a href="{% url 'new_category' %}"
+                   class="list-group-item action {% if request.path == '/product-specs/new-category'%} active {% endif %}">Создать
+                    новую категорию</a>
+                <a href="{% url 'new_feature' %}"
+                   class="list-group-item action {% if request.path == '/product-specs/new-feature'%} active {% endif %}">Создать
+                    новую характеристику</a>
+                <a href="#" class="list-group-item action">Создать значение хаоактеристики</a>
+                <a href="#" class="list-group-item action">Создать характеристику для товара</a>
+                <a href="#" class="list-group-item action">Редаткировать характеристики товара</a>
             </div>
         </div>
+        <div class="col-md-8">
+            {% block content %}
+
+            {% endblock content %}
+        </div>
     </div>
+</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
         crossorigin="anonymous"></script>
