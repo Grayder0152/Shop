@@ -23,9 +23,14 @@ class BaseView(CartMixin, View):
 
 
 class ProductDetailView(CartMixin, DetailView):
-    context_object_name = 'product'
-    template_name = 'mainapp/product_detail.html'
-    slug_url_kwarg = 'slug'
+
+    def get(self, request, *args, **kwargs):
+        product = Product.objects.get(slug=kwargs.get('slug'))
+        context = {
+            'product': product,
+            'cart': self.cart,
+        }
+        return render(request, 'mainapp/product_detail.html', context)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -34,11 +39,22 @@ class ProductDetailView(CartMixin, DetailView):
 
 
 class CategoryDetailView(CartMixin, DetailView):
-    model = Category()
-    queryset = Category.objects.all()
-    context_object_name = 'category'
-    template_name = 'mainapp/category_detail.html'
-    slug_url_kwarg = 'slug'
+    # model = Category()
+    # queryset = Category.objects.all()
+    # context_object_name = 'category'
+    # template_name = 'mainapp/category_detail.html'
+    # slug_url_kwarg = 'slug'
+    def get(self, request, *args, **kwargs):
+        categories = Category.objects.all()
+        category = Category.objects.get(slug=kwargs.get('slug'))
+        products = Product.objects.filter(category=category)
+        context = {
+            'categories': categories,
+            'category': category,
+            'products': products,
+            'cart': self.cart,
+        }
+        return render(request, 'mainapp/category_detail.html', context)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
