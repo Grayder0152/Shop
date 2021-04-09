@@ -1,13 +1,15 @@
+from .models import *
+from .mixins import CartMixin
+from .forms import OrderForm, LoginForm, RegistrationForm
+from .utils import recalc_cart
+from .tasks import send_spam_email
+
 from django.db import transaction
 from django.shortcuts import render
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.views.generic import DetailView, View
 from django.http import HttpResponseRedirect
-from .models import *
-from .mixins import CartMixin
-from .forms import OrderForm, LoginForm, RegistrationForm
-from .utils import recalc_cart
 
 
 class BaseView(CartMixin, View):
@@ -39,11 +41,6 @@ class ProductDetailView(CartMixin, DetailView):
 
 
 class CategoryDetailView(CartMixin, DetailView):
-    # model = Category()
-    # queryset = Category.objects.all()
-    # context_object_name = 'category'
-    # template_name = 'mainapp/category_detail.html'
-    # slug_url_kwarg = 'slug'
     def get(self, request, *args, **kwargs):
         categories = Category.objects.all()
         category = Category.objects.get(slug=kwargs.get('slug'))
@@ -228,3 +225,13 @@ class ProfileView(CartMixin, View):
             'categories': categories
         }
         return render(request, 'mainapp/profile.html', context)
+
+
+class SupportViews(CartMixin, View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'mainapp/support.html')
+
+    def post(self, request, *args, **kwargs):
+        email = request.POST.get('email')
+        send_spam_email.delay(email)
+        return HttpResponseRedirect('/')
