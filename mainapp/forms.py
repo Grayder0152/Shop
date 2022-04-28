@@ -4,11 +4,16 @@ from django.contrib.auth.models import User
 
 
 class OrderForm(forms.ModelForm):
+    first_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Иван'}))
+    last_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Иванов'}))
+    phone = forms.CharField(widget=forms.TextInput(attrs={'placeholder': '+380XXXXXXXXX'}))
+    address = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Гагарина 21'}))
+
+    order_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['order_date'].label = 'Дата получения заказа'
-
-    order_date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
 
     class Meta:
         model = Order

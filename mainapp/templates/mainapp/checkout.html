@@ -1,8 +1,11 @@
 {% extends 'mainapp/base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
+
 {% block title %}Оформление заказа{% endblock title %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 <h3 class="text-center mt-5 mb-5">Оформления заказа</h3>
 <table class="table">
     <thead>
@@ -34,12 +37,13 @@
     </tbody>
 </table>
 <hr>
-<h3 class="text-center mt-5 mb-5">Форма заказа</h3>
+<h3 class="text-center mt-5 mb-5" id="title">Форма заказа</h3>
 <form action="{% url 'make_order' %}" method="POST">
     {% csrf_token %}
     {{ form|crispy }}
-    <input type="submit" class="btn btn-success btn-block mb-3" value="Оформить заказ">
+    <input type="submit" class="btn btn-success btn-block mb-3" value="Оформить заказ" id="make_order_btn">
 </form>
-
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/order.js' %}"></script>
 
 {% endblock %}

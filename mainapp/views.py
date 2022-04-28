@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from .models import *
 from .mixins import CartMixin
 from .forms import OrderForm, LoginForm, RegistrationForm
@@ -9,7 +11,7 @@ from django.shortcuts import render
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.views.generic import DetailView, View
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 
 
 class BaseView(CartMixin, View):
@@ -121,6 +123,12 @@ class CheckoutView(CartMixin, View):
             'categories': categories,
             'form': form
         }
+        date = request.GET.get('date')
+        if date:
+            data = {'is_correct': True}
+            if timezone.now().date() > datetime.strptime(date, '%Y-%m-%d').date():
+                data = {'is_correct': False}
+            return JsonResponse(data)
         return render(request, 'mainapp/checkout.html', context)
 
 
@@ -147,6 +155,7 @@ class MakeOrderView(CartMixin, View):
             customer.orders.add(new_order)
             messages.add_message(request, messages.INFO, 'Спасибо за заказ')
             return HttpResponseRedirect('/')
+        messages.add_message(request, messages.ERROR, 'Неправильно поле')
         return HttpResponseRedirect('/checkout')
 
 

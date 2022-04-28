@@ -1,3 +1,4 @@
+from django.core.validators import RegexValidator
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
@@ -97,13 +98,14 @@ class Order(models.Model):
 
     cust = models.ForeignKey(Customer, verbose_name='Покупатель', on_delete=models.CASCADE,
                              related_name='related_orders', null=True, blank=True)
-    first_name = models.CharField(max_length=255, verbose_name='Имя')
-    last_name = models.CharField(max_length=255, verbose_name='Фамилия')
-    phone = models.CharField(max_length=255, verbose_name='Телефон')
+    first_name = models.CharField(max_length=30, verbose_name='Имя')
+    last_name = models.CharField(max_length=30, verbose_name='Фамилия')
+    phone = models.CharField(max_length=16, verbose_name='Телефон', unique=True,
+                             validators=[RegexValidator(regex=r"^\+?1?\d{8,15}$")])
     cart = models.ForeignKey(Cart, verbose_name='Корзина', on_delete=models.CASCADE, null=True, blank=True)
-    address = models.CharField(max_length=255, verbose_name='Адрес', null=True, blank=True)
-    status = models.CharField(max_length=100, verbose_name='Статус заказа', choices=STATUS_CHOICES, default=STATUS_NEW)
-    buying_type = models.CharField(max_length=100, verbose_name='Тип заказа', choices=BUYING_TYPE_CHOICE,
+    address = models.CharField(max_length=120, verbose_name='Адрес')
+    status = models.CharField(max_length=20, verbose_name='Статус заказа', choices=STATUS_CHOICES, default=STATUS_NEW)
+    buying_type = models.CharField(max_length=10, verbose_name='Тип заказа', choices=BUYING_TYPE_CHOICE,
                                    default=BUYING_TYPE_SELF)
     comment = models.TextField(verbose_name='Комментарий к заказу', null=True, blank=True)
     created_at = models.DateTimeField(auto_now=True, verbose_name='Дата создания заказа')

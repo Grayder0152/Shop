@@ -91,15 +91,17 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static_dev'),
-)
-
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static_dev'),
+# )
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static/')
+]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # celery -A Shop worker -l info
