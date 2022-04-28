@@ -2,7 +2,12 @@
 {% block title %}Профиль пользователя{% endblock title %}
 
 {% block content %}
-<h3 class="mt-3 mb-3">Заказы пользователя {{ request.user.username }}</h3>
+<div class="d-flex flex-row justify-content-between mt-4">
+    <h3>Ваши заказы</h3>
+    <form action="{% url 'logout' %}">
+        <button type="submit" class="btn btn-danger">Выйти из системы</button>
+    </form>
+</div>
 {% if not orders.count %}
 <div class="col-md-12" style="margin:300px 0">
     <h3>У вас еще нет заказов, <a href="{% url 'base' %}">Начните делать покупки</a></h3>
@@ -31,17 +36,17 @@
                 </ul>
             </td>
             <td>
-                <button class="btn btn-info" data-toggle="modal" data-target="#exampleModal-{{ order.id }}">
+                <button class="btn btn-info" data-toggle="modal" data-target="#order-info-{{ order.id }}">
                     Дополнительно
                 </button>
-                <div class="modal fade" id="exampleModal-{{ order.id }}" tabindex="-1"
-                     aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
+                <div class="modal fade" tabindex="-1" aria-hidden="true" role="dialog" id="order-info-{{ order.id }}">
+                    <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Детализация заказа</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+                                <h5 class="modal-title">Детализация заказа</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
                             <div class="modal-body">
                                 <h4 class="text-center">Товар</h4>
@@ -76,10 +81,12 @@
                                 <p>Имя: <strong>{{ order.first_name }}</strong></p>
                                 <p>Фамилия: <strong>{{ order.last_name }}</strong></p>
                                 <p>Телефон: <strong>{{ order.phone }}</strong></p>
-
+                                <p>Адрес: <strong>{{ order.address }}</strong></p>
+                                <p>Дата оформления: <strong>{{ order.created_at }}</strong></p>
+                                <p>Статус: <strong>{{ order.status }}</strong></p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
                             </div>
                         </div>
                     </div>

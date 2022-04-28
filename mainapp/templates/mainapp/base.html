@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body style="padding-top:56px;">
+<body style="padding-top:56px;" class="d-flex flex-column min-vh-100 justify-content-between">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="{% url 'base' %}">Techno-Shop</a>
@@ -39,19 +39,20 @@
                     <a class="nav-link text-light" href="{% url 'support' %}">Рассылка</a>
                 </li>
                 {% endif %}
-                <li class="nav-item">
-                    {% if request.user.is_authenticated %}
-                    <span class="navbar text text-light">Здраствуйте, <span class="badge badge-danger">
-                            <a class="text-light" style="text-decoration:none; font-size:14px;"
-                               href="{% url 'profile' %}">
-                                {{ request.user.username }}
-                            </a>
-                        </span>| <a href="{% url 'logout' %}"
-                                    style="color:white; text-decoration:none">Вийти из системы</a></span>
-                    {% endif %}
-                </li>
             </ul>
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    {% if request.user.is_authenticated %}
+                    <span class="navbar text text-light">
+                            <span class="badge badge-danger">
+                                <a class="text-light" style="text-decoration:none; font-size:17px;"
+                                   href="{% url 'profile' %}">
+                                    {{ request.user.username }}
+                                </a>
+                            </span>
+                        </span>
+                    {% endif %}
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'cart' %}">
                         Корзина <span class="badge badge-pill badge-danger">{{ cart.products.count }}</span>
@@ -70,14 +71,14 @@
         <div class="col-lg-9">
             {% block content %}
             {% if messages %}
-                {% for message in messages %}
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong>{{ message }}</strong>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                {% endfor %}
+            {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{ message }}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endfor %}
             {% endif %}
             <div class="row mt-5">
                 {% for product in products %}
@@ -106,10 +107,13 @@
 </div>
 <footer class="py-5 bg-dark mt-5">
     <div class="container">
-        <p class="m-0 text-center text-white">Copyright © Your Website 2020</p>
+        <p class="m-0 text-center text-white">
+            Copyright © Techno Shop <script>document.write(new Date().getFullYear())</script>
+        </p>
     </div>
 </footer>
-<script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+<script src="http://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
         crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
