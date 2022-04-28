@@ -189,6 +189,11 @@ class LoginView(CartMixin, View):
 class RegistrationView(CartMixin, View):
 
     def get(self, request, *args, **kwargs):
+        username = request.GET.get('username')
+        if username:
+            data = {'is_exist': User.objects.filter(username=username).exists()}
+            return JsonResponse(data)
+
         form = RegistrationForm(request.POST or None)
         categories = Category.objects.all()
         context = {

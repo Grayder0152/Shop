@@ -23,12 +23,13 @@ class OrderForm(forms.ModelForm):
 
 
 class LoginForm(forms.ModelForm):
+    username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'user123'}))
+    password = forms.CharField(widget=forms.PasswordInput)
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['username'].label = 'Логин'
         self.fields['password'].label = 'Пароль'
-
-    password = forms.CharField(widget=forms.PasswordInput)
 
     def clean(self):
         username = self.cleaned_data['username']
@@ -47,11 +48,14 @@ class LoginForm(forms.ModelForm):
 
 
 class RegistrationForm(forms.ModelForm):
+    username = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'user123'}))
     confirm_password = forms.CharField(widget=forms.PasswordInput)
     password = forms.CharField(widget=forms.PasswordInput)
-    phone = forms.CharField(required=False)
-    address = forms.CharField(required=False)
-    email = forms.CharField(required=True)
+    email = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'user@gmail.com'}), required=True)
+    first_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Иван'}), required=False)
+    last_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Иванов'}), required=False)
+    phone = forms.CharField(widget=forms.TextInput(attrs={'placeholder': '+380XXXXXXXXX'}), required=False)
+    address = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Гагарина 21'}), required=False)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -64,14 +68,14 @@ class RegistrationForm(forms.ModelForm):
         self.fields['address'].label = 'Адрес'
         self.fields['email'].label = 'Электронная почта'
 
-    def clean_email(self):
-        email = self.cleaned_data['email']
-        domain = email.split('.')[-1]
-        if domain in ['com', 'net']:
-            raise forms.ValidationError('Регистрация с таким доменом недоступна')
-        if User.objects.filter(email=email).exists():
-            raise forms.ValidationError('Данный почтовый ящик зарегестрирован в системе')
-        return email
+    # def clean_email(self):
+    # email = self.cleaned_data['email']
+    # domain = email.split('.')[-1]
+    # if domain in ['com', 'net']:
+    #     raise forms.ValidationError('Регистрация с таким доменом недоступна')
+    # if User.objects.filter(email=email).exists():
+    #     raise forms.ValidationError('Данный почтовый ящик зарегестрирован в системе')
+    # return email
 
     def clean_username(self):
         username = self.cleaned_data['username']
@@ -88,4 +92,4 @@ class RegistrationForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('username', 'password', 'confirm_password', 'first_name', 'last_name', 'phone', 'address', 'email')
+        fields = ('username', 'password', 'confirm_password', 'email', 'first_name', 'last_name', 'phone', 'address')

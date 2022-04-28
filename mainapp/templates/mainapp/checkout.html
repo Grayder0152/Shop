@@ -5,45 +5,44 @@
 {% block title %}Оформление заказа{% endblock title %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
-<h3 class="text-center mt-5 mb-5">Оформления заказа</h3>
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">Наименованик</th>
-        <th scope="col">Изображение</th>
-        <th scope="col">Цена</th>
-        <th scope="col">Количество</th>
-        <th scope="col">Общая цена</th>
-        <th scope="col">Действие</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for item in cart.products.all %}
-    <tr>
-        <th scope="row">{{ item.content_object.title }}</th>
-        <td class="w-25"><img src="{{ item.product.image.url }}" class="img-fluid"></td>
-        <td>{{ item.content_object.price }} руб</td>
-        <td>{{ item.qty }}</td>
-        <td>{{ item.final_price }} руб</td>
-    </tr>
-    {% endfor %}
-    <tr>
-        <td colspan="2"></td>
-        <td>Итого:</td>
-        <td>{{ cart.total_products }}</td>
-        <td><strong>{{ cart.final_price }} руб.</strong></td>
-    </tr>
-    </tbody>
-</table>
-<hr>
-<h3 class="text-center mt-5 mb-5" id="title">Форма заказа</h3>
-<form action="{% url 'make_order' %}" method="POST">
-    {% csrf_token %}
-    {{ form|crispy }}
-    <input type="submit" class="btn btn-success btn-block mb-3" value="Оформить заказ" id="make_order_btn">
-</form>
-<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-<script src="{% static 'js/order.js' %}"></script>
+    <h3 class="text-center mt-5 mb-5">Оформления заказа</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Наименованик</th>
+            <th scope="col">Изображение</th>
+            <th scope="col">Цена</th>
+            <th scope="col">Количество</th>
+            <th scope="col">Общая цена</th>
+            <th scope="col">Действие</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in cart.products.all %}
+            <tr>
+                <th scope="row">{{ item.content_object.title }}</th>
+                <td class="w-25"><img src="{{ item.product.image.url }}" class="img-fluid"></td>
+                <td>{{ item.content_object.price }} руб</td>
+                <td>{{ item.qty }}</td>
+                <td>{{ item.final_price }} руб</td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <td colspan="2"></td>
+            <td>Итого:</td>
+            <td>{{ cart.total_products }}</td>
+            <td><strong>{{ cart.final_price }} руб.</strong></td>
+        </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h3 class="text-center mt-5 mb-5" id="title">Форма заказа</h3>
+    <form action="{% url 'make_order' %}" method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" class="btn btn-success btn-block mb-3" value="Оформить заказ" id="make_order_btn">
+    </form>
+    <script src="{% static 'js/validator.js' %}"></script>
+    <script type="module" src="{% static 'js/order.js' %}"></script>
 
 {% endblock %}

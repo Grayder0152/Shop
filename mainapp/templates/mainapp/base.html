@@ -1,3 +1,5 @@
+{% load static %}
+<!DOCTYPE html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -6,6 +8,7 @@
     <title>{% block title %}Techno-Shop{% endblock title %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 </head>
 <body style="padding-top:56px;" class="d-flex flex-column min-vh-100 justify-content-between">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -24,26 +27,26 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         {% for category in categories %}
-                        <a class="dropdown-item" href="{{ category.get_absolute_url }}">{{ category.name }}</a>
+                            <a class="dropdown-item" href="{{ category.get_absolute_url }}">{{ category.name }}</a>
                         {% endfor %}
                     </div>
                 </li>
                 {% if not request.user.is_authenticated %}
-                <li>
-                    <a class="nav-link text-light" href="{% url 'login' %}">Авторизация</a>
-                </li>
-                <li>
-                    <a class="nav-link text-light" href="{% url 'registration' %}">Регистрация</a>
-                </li>
-                <li>
-                    <a class="nav-link text-light" href="{% url 'support' %}">Рассылка</a>
-                </li>
+                    <li>
+                        <a class="nav-link text-light" href="{% url 'login' %}">Авторизация</a>
+                    </li>
+                    <li>
+                        <a class="nav-link text-light" href="{% url 'registration' %}">Регистрация</a>
+                    </li>
+                    <li>
+                        <a class="nav-link text-light" href="{% url 'support' %}">Рассылка</a>
+                    </li>
                 {% endif %}
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     {% if request.user.is_authenticated %}
-                    <span class="navbar text text-light">
+                        <span class="navbar text text-light">
                             <span class="badge badge-danger">
                                 <a class="text-light" style="text-decoration:none; font-size:17px;"
                                    href="{% url 'profile' %}">
@@ -63,52 +66,55 @@
     </div>
 </nav>
 <div class="container">
-    <div class="row">
+    <div class="row pt-4">
         <div class="col-lg-3">
-            <h1 class="my-4">Techno-Shop</h1>
+            <h1>Techno-Shop</h1>
             <div class="list-group"></div>
         </div>
         <div class="col-lg-9">
-            {% block content %}
+            <div id="alerts"></div>
             {% if messages %}
-            {% for message in messages %}
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>{{ message }}</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            {% endfor %}
-            {% endif %}
-            <div class="row mt-5">
-                {% for product in products %}
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="{{ product.get_absolute_url }}">
-                            <img class="card-img-top" src="{{ product.image.url }}">
-                        </a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
-                            </h4>
-                            <h5>{{ product.price }} руб.</h5>
-                            <p class="card-text">{{ product.description|truncatewords:10 }}</p>
-                            <a href="{% url 'add_to_cart' slug=product.slug %}">
-                                <button class="btn btn-danger">Добавить в корзину</button>
-                            </a>
-                        </div>
+                {% for message in messages %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>{{ message }}</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                </div>
                 {% endfor %}
-            </div>
+            {% endif %}
+            {% block content %}
+                <div class="row mt-5">
+                    {% for product in products %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <a href="{{ product.get_absolute_url }}">
+                                    <img class="card-img-top" src="{{ product.image.url }}">
+                                </a>
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+                                    </h4>
+                                    <h5>{{ product.price }} руб.</h5>
+                                    <p class="card-text">{{ product.description|truncatewords:10 }}</p>
+                                    <a href="{% url 'add_to_cart' slug=product.slug %}">
+                                        <button class="btn btn-danger">Добавить в корзину</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
             {% endblock content %}
+            </di>
         </div>
     </div>
 </div>
 <footer class="py-5 bg-dark mt-5">
     <div class="container">
         <p class="m-0 text-center text-white">
-            Copyright © Techno Shop <script>document.write(new Date().getFullYear())</script>
+            Copyright © Techno Shop
+            <script>document.write(new Date().getFullYear())</script>
         </p>
     </div>
 </footer>

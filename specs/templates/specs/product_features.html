@@ -15,13 +15,12 @@
             <div class="list-group">
                 <a href="{% url 'new_category' %}"
                    class="list-group-item action {% if request.path == '/product-specs/new-category'%} active {% endif %}">Создать
-                    новую категорию</a>
-                <a href="{% url 'new_feature' %}"
-                   class="list-group-item action {% if request.path == '/product-specs/new-feature'%} active {% endif %}">Создать
-                    новую характеристику</a>
-                <a href="#" class="list-group-item action">Создать значение хаоактеристики</a>
-                <a href="#" class="list-group-item action">Создать характеристику для товара</a>
-                <a href="#" class="list-group-item action">Редаткировать характеристики товара</a>
+                    категорию</a>
+{#                <a href="{% url 'new_feature' %}"#}
+{#                   class="list-group-item action {% if request.path == '/product-specs/new-feature'%} active {% endif %}">Создать#}
+                    характеристику</a>
+                <a href="#" class="list-group-item action">Добавить товар</a>
+                <a href="#" class="list-group-item action">Редактировать товар</a>
             </div>
         </div>
         <div class="col-md-8">
