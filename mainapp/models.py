@@ -100,7 +100,7 @@ class Order(models.Model):
                              related_name='related_orders', null=True, blank=True)
     first_name = models.CharField(max_length=30, verbose_name='Имя')
     last_name = models.CharField(max_length=30, verbose_name='Фамилия')
-    phone = models.CharField(max_length=16, verbose_name='Телефон', unique=True,
+    phone = models.CharField(max_length=16, verbose_name='Телефон',
                              validators=[RegexValidator(regex=r"^\+?1?\d{8,15}$")])
     cart = models.ForeignKey(Cart, verbose_name='Корзина', on_delete=models.CASCADE, null=True, blank=True)
     address = models.CharField(max_length=120, verbose_name='Адрес')

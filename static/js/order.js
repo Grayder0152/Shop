@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    autoSetFields();
     validateOrder();
 });
 
@@ -28,4 +29,27 @@ function checkDate() {
             }
         });
     });
+}
+
+function autoSetFields() {
+    let data = {
+        user: true
+    }
+    $.ajax({
+        method: "GET",
+        dataType: "json",
+        data: data,
+        success: function (response) {
+            setField($('#id_first_name'), response['first_name'])
+            setField($('#id_last_name'), response['last_name'])
+            setField($('#id_phone'), response['phone'])
+            setField($('#id_address'), response['address'])
+        }
+    });
+}
+
+function setField(field, value) {
+    if (value) {
+        field.val(value);
+    }
 }

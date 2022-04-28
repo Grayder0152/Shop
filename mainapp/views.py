@@ -116,6 +116,23 @@ class CartView(CartMixin, View):
 
 class CheckoutView(CartMixin, View):
     def get(self, request, *args, **kwargs):
+        user = request.GET.get('user')
+        if user and request.user.is_authenticated:
+            customer = Customer.objects.get(user=request.user)
+            data = {
+                'first_name': customer.user.first_name,
+                'last_name': customer.user.last_name,
+                'phone': customer.phone,
+                'address': customer.address,
+            }
+            return JsonResponse(data)
+        date = request.GET.get('date')
+        if date:
+            data = {'is_correct': True}
+            if timezone.now().date() > datetime.strptime(date, '%Y-%m-%d').date():
+                data = {'is_correct': False}
+            return JsonResponse(data)
+
         categories = Category.objects.all()
         form = OrderForm(request.POST or None)
         context = {
@@ -123,12 +140,6 @@ class CheckoutView(CartMixin, View):
             'categories': categories,
             'form': form
         }
-        date = request.GET.get('date')
-        if date:
-            data = {'is_correct': True}
-            if timezone.now().date() > datetime.strptime(date, '%Y-%m-%d').date():
-                data = {'is_correct': False}
-            return JsonResponse(data)
         return render(request, 'mainapp/checkout.html', context)
 
 
